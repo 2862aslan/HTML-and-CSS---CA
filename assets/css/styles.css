@@ -31,13 +31,14 @@ html {
 body {
   overflow-x: hidden;
   background-image: url(/assets/image/backround.jpg);
- background-color: rgba(255, 200 , 200, 0.3);
- background-blend-mode: overlay;
+  background-color: rgba(255, 200 , 200, 0.3);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: relative;
+  position: flex;
+  align-items: center;
 }
 
 
@@ -155,34 +156,73 @@ header {
   display: none;
 }
 
-.bar-icon,
-.x-icon {
+.bar-icon{
   display: none;
   position: absolute;
   top: 28px;
   right: 20px;
-  z-index: 1000;
   font-size: 40px;
-  float: right;
   cursor: pointer;
   color: #c1b9b9;
 }
+
+#mobil-kontrol:checked ~ .x-icon {
+  display: block;
+  opacity: 1;
+}
+
+.x-icon{
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #c1b9b9;
+  transition: opacity 0.3s ease;
+}
+
+
+
 .mobil-nav {
   background-color: #a5a0a0;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  height: 80vh;
   position: fixed;
-  width: 130px;
-  height: 250px;
-  top: 80px;
-  right: 0px;
-  transition: all 0.8s ease-in-out;
+  top: 70px;
+  right:-100%;
+  opacity: 0;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
   border-radius: 8px;
+  z-index: 10000;
+  padding-top: 20px;
+}
+
+#mobil-kontrol:checked ~ .mobil-nav {
+  right: 30px;
+  opacity: 1;
+}
+
+.mobil-nav.active{
+  right: 0;
+  opacity: 1;
+}
+
+.mobil-nav text{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: var(--primaryBorder);
+  border-radius: var(--primaryBorder-radius);
 }
 
 .mobil-nav a {
   color: black;
   text-decoration: none;
-  margin: 20px 5px;
+  margin: 15px 0px;
   font-size: 20px;
 }
 
@@ -192,193 +232,26 @@ header {
 
 }
 
+.mobil-icons{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.mobil-icons a{
+  font-size: 24px;
+  color: #000000;
+}
+
+
+
 /* Header Section Finish -----------------------*/
 
 
 
-/* ----------------------------Slider Section Start */
-/* .clearfix{
-  clear: both;
-  height: 143.45px;
-} */
-main{
-  position: relative;
-  width: 90%;
-  min-height: 800px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: var(--primaryBorder);
-  border-radius: var(--primaryBorder-radius);
-  margin: 20px 0;
-}
 
-.slider-content {
-  height: 500px;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: auto;
-  border: var(--primaryBorder);
-  border-radius: var(--primaryBorder-radius);
-
-  
-}
-
-.slider-content .item {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  transition: all ease 0.8s;
-  
-}
-
-.slider-content .item img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-}
-
-.slider-content .item:hover {
-  width: 200%;
-}
-.slider-content .item .banner-text {
- 
-  position: absolute;
-  bottom: -30px;
-  width: 100%;
-  height: 50px;
-  padding: 50px 50px 30px;
-  color: #bfb8b8;
-  display: flex;
-  align-items: flex-end;
-  opacity: 0;
-  transition: all ease-in-out 0.8s;
-
-}
-.item:hover .banner-text{
-  bottom: 0;
-  opacity: 1;
-}
-
-
-.slider-content .item .banner-text h3{
-  font-size: 36px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
-
-}
-
-.slider-content .item .banner-text h5{
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-.item a{
-  background: #970303;
-  padding: 10px;
-  font-size: 16px;
-  color: #c1b9b9;
-  font-weight: bolder;
-  border-radius: 10px;
-}
-/* Slider Section Finish--------------------- */
-.title{
-  position: relative;
-  width: 90%;
-  height: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  margin: 20px 0;
-}
-.title h1{
-  color: var(--fontColor);
-  padding: 5px 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  border: var(--primaryBorder);
-  border-radius: var(--primaryBorder-radius);
-  text-wrap: nowrap;
-  letter-spacing: 3px;
-  font-size: 30px;
-  
-}
-/* --------------------- Product Section Start*/
-
-.movies-container, .fuatured-container{
-  width: 100%;
-  margin: 30px 0;
-  position: relative;
-
-
-
-
-}
-
-.movies-container h2, .fuatured-container h2{
-  margin-bottom: 15px;
-  color: var(--fontColor);
-}
-
-.cards{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card{
-  width: calc(25% - 30px);
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: var(--primaryBorder-radius);
-  padding: 20px;
-  position: relative;
-}
-.card:hover{
-  transition: 300ms all;
-  transform: scale(1.05);
-
-}
-
-.card img{
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: var(--primaryBorder-radius);
-
-}
-
-.card-button{
-  display: block;
-  margin: 2px auto;
-  background: var(--primaryColor);
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
-  color: var(--fontColor);
-  border: none;
-  padding: 8px 20px;
-  outline: none;
-  border-radius: var(--primaryBorder-radius);
-  width: 70px;
-  font-size: var(--aTextFont-size);
-
-
-}
-
-.popular{
-  color: #ff0000;
-  font-size: 24px;
-  position: absolute;
-  top: -10px;
-  right: -5px;
-}
-
-/* --------------------- Product Section Start*/
 
 /* -------------------Footer Section Start */
 
@@ -448,58 +321,19 @@ footer{
     font-size: 32px;
   }
 
-  .bar-icon, .x-icon {
+  .bar-icon, .x-icon,  .mobil-nav{
     display: block;
   }
 
-  .x-icon {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .x-icon{
+    opacity: 0;;
   }
-  .mobil-nav {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  #mobil-kontrol:checked ~ .x-icon {
-    opacity: 1;
-  }
+
   #mobil-kontrol:checked ~ .bar-icon {
     opacity: 0;
   }
-  #mobil-kontrol:checked ~ .mobil-nav {
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-    z-index: 9999;
-  }
 
-  .title{
-    background-image: url("/assets/image/slider2.jpg");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 100px 0px;
-    height: auto;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-
-  }
-
-  .title h1{
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 90%;
-    
-  }
-
-  .fuatured-container, .movies-container{
-    text-align: center;
-  }
-
-  .card{
-    width: 90%;
-    margin: 15px 0;
-  }
+  
 
 
 

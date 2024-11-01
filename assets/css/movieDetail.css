@@ -1,0 +1,201 @@
+
+.title{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    border: var(--primaryBorder);
+    border-radius: var(--primaryBorder-radius);
+    height: auto;
+    width: 90%;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    color: var(--fontColor);
+    letter-spacing: 1px;
+
+}
+
+.title h1{
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 5vw;
+    max-width: 90%;
+    overflow: visible;
+}
+
+main {
+    position: relative;
+    width: 90%;
+    min-height: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: var(--primaryBorder);
+    border-radius: var(--primaryBorder-radius);
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    color: black;
+    
+    
+  }
+
+.image-container{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: 30px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    
+}  
+.image{
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.description{
+    max-width: 40%;
+    position: relative;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.description h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+}
+.movies-description{
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+}
+
+h3{
+    font-size: 30px;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+    
+}
+
+.description h4{
+    font-size: 25px;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+    
+}
+
+.top-section p, .bottom-section p, .top li{
+    font-size: 20px;
+}
+
+.top li{
+    list-style-type: square;
+}
+
+
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.bottom-section{
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 60px;
+    text-align: center; 
+}
+.price span{
+    font-size: 40px;
+}
+del{
+    text-decoration: line-through; 
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+    
+    }
+    .description{
+        max-width: 90%;
+        margin: auto;
+        padding: 20px;
+        display: block;
+    }
+    .description h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    .movies-description{
+        font-size: 15px; 
+    }
+    
+    h3{
+        font-size: 20px;
+        text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+        
+    }
+    
+    .description h4{
+        font-size: 15px;
+        text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+        
+    }
+    
+    .top-section p, .bottom-section p, .top li{
+        font-size: 10px;
+    }
+    
+    .top li{
+        list-style-type: square;
+    }
+    
+    
+    .top-section{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .bottom-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    .price{
+        font-weight: bold;
+        font-size: 20px;
+        margin: 60px;
+        text-align: center; 
+    }
+    .price span{
+        font-size: 25px;
+    }
+
+
+
+
+
+
+    
+}
