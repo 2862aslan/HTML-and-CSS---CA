@@ -14,6 +14,7 @@
   />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/contactUs.css">
 
   <link
     rel="stylesheet"
@@ -92,6 +93,38 @@
   
   </div>
 </header>
+<div class="title">
+  <h1><strong>Contact Us</strong></h1>
+</div>
+<main>
+  <div class="upper-section">
+    <form class="message-form" action="/submit-contact" method="post">
+      <label for="name">Name : </label>
+      <input type="text" id="name" name="name">
+      <label for="surname">Surname : </label>
+      <input type="text" id="surname" name="surname">
+      <label for="email">Email : </label>
+      <input type="text" id="email" name="email" required>
+      <label for="subject">Subject : </label>
+      <input type="text" id="subject" name="subject" required>
+      <label for="message">Message : </label>
+      <textarea type="text" id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <div class="description">
+      <h3>Support Line</h3>
+
+        <p>For any inquiries, please contact us at the provided email or phone number.</p>
+        <p><b>Email Address:</b> support@example.com</p>
+        <p><b>Phone Number:</b> +1 (800) 123-4567</p>
+        <p><b>Address:</b> 123 Cinema Street, Film City, USA</p>
+    </div>
+  </div>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3999.7088194914404!2d10.749222977691689!3d59.91796356376448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e64093f6e59%3A0xf82b0e58cf8d54e0!2sOsterhaus&#39;%20gate%2022%2C%200183%20Oslo!5e0!3m2!1str!2sno!4v1729335352090!5m2!1str!2sno">Noroff Oslo </iframe>
+  </div>
+</main>
 <footer>
   <div class="footer-container" id="footer-contact">
     <div class="footer-content">

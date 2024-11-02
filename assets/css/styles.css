@@ -321,10 +321,13 @@ footer{
     font-size: 32px;
   }
 
-  .bar-icon, .x-icon,  .mobil-nav{
+  .bar-icon, .x-icon{
     display: block;
   }
-
+  .mobil-nav{
+    display: inline-block;
+    position: fixed;
+  }
   .x-icon{
     opacity: 0;;
   }
