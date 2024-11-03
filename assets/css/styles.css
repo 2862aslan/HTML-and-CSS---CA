@@ -30,7 +30,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background-image: url(assets/image/backround.jpg);
+  background-image: url(/assets/image/backround.jpg);
   background-color: rgba(255, 200 , 200, 0.3);
   background-blend-mode: overlay;
   background-size: cover;
@@ -191,7 +191,6 @@ header {
   align-items: center;
   width: 70vw;
   height: 80vh;
-  position: fixed;
   top: 70px;
   right:-100%;
   opacity: 0;
@@ -202,14 +201,9 @@ header {
 }
 
 #mobil-kontrol:checked ~ .mobil-nav {
-  right: 30px;
   opacity: 1;
 }
 
-.mobil-nav.active{
-  right: 0;
-  opacity: 1;
-}
 
 .mobil-nav text{
   width: 80%;
@@ -324,10 +318,7 @@ footer{
   .bar-icon, .x-icon{
     display: block;
   }
-  .mobil-nav{
-    display: inline-block;
-    position: fixed;
-  }
+
   .x-icon{
     opacity: 0;;
   }

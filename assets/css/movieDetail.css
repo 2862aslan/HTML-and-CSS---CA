@@ -130,6 +130,20 @@ del{
     text-decoration: line-through; 
 }
 
+.image-container a{
+    display: block;
+    margin-bottom: 20px;
+    background: var(--primaryColor);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    color: var(--fontColor);
+    border: none;
+    padding: 8px 20px;
+    outline: none;
+    border-radius: var(--primaryBorder-radius);
+    width: 70px;
+    font-size: var(--aTextFont-size);
+}
+
 
 
 
