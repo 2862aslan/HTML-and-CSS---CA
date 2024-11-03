@@ -83,7 +83,7 @@ main {
 }
 /* Slider Section Finish--------------------- */
 .title {
-  background-image: url("assets/image/mobil-title.jpg");
+  background-image: url("/assets/image/mobil-title.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
