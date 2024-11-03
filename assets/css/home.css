@@ -1,11 +1,8 @@
 /* ----------------------------Main Section Start */
 main {
   position: relative;
-  width: 90%;
+  width: 100%;
   min-height: 800px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: var(--primaryBorder);
   border-radius: var(--primaryBorder-radius);
   align-items: center;
   display: flex;
@@ -141,7 +138,9 @@ main {
 .movies-container h2,
 .fuatured-container h2 {
   margin-bottom: 15px;
-  color: var(--fontColor);
+  color: black;
+  margin-left: 25px;
+  filter: brightness(2);
 }
 
 .cards {

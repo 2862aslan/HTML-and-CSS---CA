@@ -136,6 +136,7 @@ main{
 }
 .checkout-form, .checkout-cart{
     width: 90%;
+    margin-top: 30px;
 }
 
   }
