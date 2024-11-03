@@ -8,6 +8,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  padding: 0 40px;
 }
 
 .slider-content {

@@ -188,13 +188,13 @@ header {
 
 .mobil-nav {
   background-color: #a5a0a0;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 70vw;
   height: 50vh;
   top: -35px;
   right: -50px;
-  opacity: 0;
+  opacity: 1;
   transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
   border-radius: 8px;
   z-index: 10000;
@@ -322,9 +322,12 @@ footer{
   .bar-icon, .x-icon{
     display: block;
   }
+  .mobil-nav{
+    display: flex;
+  }
 
-  .x-icon{
-    opacity: 0;;
+  .x-icon, .mobil-nav{
+    opacity: 0;
   }
 
   #mobil-kontrol:checked ~ .bar-icon {
